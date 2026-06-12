@@ -1,7 +1,6 @@
 import { CiMail } from "react-icons/ci";
 import { FiLinkedin } from "react-icons/fi";
 import { FiGithub } from "react-icons/fi";
-import { RiDiscordLine } from "react-icons/ri";
 import { FiInstagram } from "react-icons/fi";
 import { LuFacebook } from "react-icons/lu";
 

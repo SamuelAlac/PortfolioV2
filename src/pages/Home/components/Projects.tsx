@@ -1,8 +1,6 @@
 import ProjectCard from "../../../components/ProjectCard";
 import { projects } from "../../../constants/projects";
 
-const enrollmentSystem = '/projects/StudentEnrollment.png';
-
 const Projects = () => {
   return (
       <section id="projects" className="min-h-screen mt-10 lg:mt-0 lg:pt-20 mx-5 lg:mx-20 rounded-4xl space-y-10 pt-15">
