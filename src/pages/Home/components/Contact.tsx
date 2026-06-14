@@ -1,13 +1,15 @@
 import { contacts } from '../../../constants/contacts'
 import ContactCard from '../../../components/ContactCard'
 import ContactForm from '../../../components/ContactForm'
+import { useMobile } from '@/hooks/useMobile'
 
 const Contact = () => {
+  const isMobile = useMobile();
 
   return (
     <section id="contact" className="min-h-screen mt-10 lg:mt-0 pt-15 lg:pt-20 mx-5 lg:mx-25 
       flex flex-col md:flex-row md:justify-between items-center">
-      <div className='lg:h-130 lg:w-150 p-3 space-y-3' data-aos='fade-right'>
+      <div className='lg:h-130 lg:w-150 p-3 space-y-3' data-aos={isMobile ? 'fade-up' : 'fade-right'}>
         <h2 className='text-sm md:text-5xl font-medium text-[#CBACF9]'>Contact Me</h2>
         <p className='text-xs md:text-lg tracking-wider text-white/80'>
         I'm available for freelance projects, web development job opportunities, and collaborations.
