@@ -32,7 +32,7 @@ const Navbar = () => {
 
   return (
     <section className="flex flex-col lg:flex-row justify-between px-3 lg:px-7 items-center 
-    w-full py-3.5 fixed bg-linear-to-r from-[#04071D] to-[#0C0E23] z-10" data-aos='fade-down'>
+    w-full py-3.5 fixed bg-linear-to-r from-[#04071D] to-[#0C0E23] z-10">
       <div className="flex justify-between items-center w-full">
         <h2 className="text-white text-xl hover:text-[#CBACF9] cursor-pointer">
           Samuel Alac
