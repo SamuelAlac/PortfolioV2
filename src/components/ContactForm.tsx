@@ -47,11 +47,12 @@ const ContactForm = () => {
 
   return (
     <form ref={form} onSubmit={sendEmail} className='bg-white/5 rounded-sm w-full lg:h-130 md:w-100 lg:w-150 
-      flex flex-col p-3 lg:px-3 space-y-4 justify-center lg:justify-start' data-aos='fade-left'>
+      flex flex-col p-3 lg:px-3 space-y-4 justify-center lg:justify-start' data-aos='fade-left' aria-label='Contact form'>
       <div className='flex flex-col gap-y-1'>
         <label htmlFor="user_name" className='text-sm lg:text-xl'>Name</label>
         <input type="text" name='user_name' 
           id='user_name'
+          autoComplete='name'
           required
           className='bg-white/5 h-10 rounded-sm p-2'
           placeholder='John Doe'
@@ -62,6 +63,7 @@ const ContactForm = () => {
         <label htmlFor="user_email" className='text-sm lg:text-xl'>Email Address</label>
         <input type="email" name="user_email"
           id='user_email'
+          autoComplete='email'
           required
           className='bg-white/5 h-10 rounded-sm p-2'
           placeholder='youremail@example.com'
@@ -77,9 +79,9 @@ const ContactForm = () => {
           placeholder='Tell me about your projects or ideas'
         />
       </div>
-      <input type="submit" disabled={loading} value={loading ? 'Sending...' : 'Send Message'}
-        className="bg-[#CBACF9]/80 h-10 rounded-md disabled:opacity-50"
-      />
+      <button type="submit" disabled={loading} className="bg-[#CBACF9]/80 h-10 rounded-md disabled:opacity-50">
+        {loading ? 'Sending...' : 'Send Message'}
+      </button>
     </form>
   )
 }
