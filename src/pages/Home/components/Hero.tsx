@@ -1,29 +1,30 @@
 import { Carousel, CarouselContent, CarouselItem } from "../../../components/ui/carousel"
 import AutoScroll from 'embla-carousel-auto-scroll';
 import { technologies } from "../../../constants/technologies";
+import { useMobile } from "@/hooks/useMobile";
 const PROFILE_PIC = '/SAMUEL_ALAC.png'
 
 const Hero = () => {
-
+  const isMobile = useMobile();
   const autoScroll = AutoScroll({ speed: 1, stopOnInteraction: false, stopOnMouseEnter: true })
 
   return (
     <section id="#" className="flex flex-col min-h-screen pt-30">
       <div className="flex flex-col-reverse md:flex-row items-center lg:justify-around justify-center gap-10 md:gap-0 h-full">
         <div className="lg:h-120 lg:w-150 md:h-100 md:w-100 text-center md:text-start flex flex-col justify-center space-y-2"
-        data-aos='fade-right'>
+        data-aos={isMobile ? 'fade-up' : 'fade-right'}>
           <p className="text-xl md:text-3xl lg:text-4xl font-normal">Hello World, I'm</p>
           <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-[#CBACF9]">Samuel Vincent Alac</h1>
           <h2 className="text-xl md:text-3xl lg:text-4xl font-semibold">Software Developer</h2>
         </div>
         
         <figure className="h-55 w-55 md:h-75 md:w-75 lg:h-100 lg:w-100 rounded-full overflow-hidden border-2 border-white/30"
-        data-aos="fade-left">
+        data-aos={isMobile ? 'fade-up' : 'fade-left'}>
           <img src={PROFILE_PIC} alt="Samuel Vincent Alac" className="w-full h-full object-cover" />
         </figure>
       </div>
 
-      <div className="md:mx-10 lg:mx-25" data-aos='fade-up'>
+      <div className="mt-35 md:mt-20 lg:mt-0 md:mx-10 lg:mx-25" data-aos='fade-up'>
         <h2 className="text-white text-center">Technologies I Work With</h2>
         <hr className="border-white/15" />
         <ul>

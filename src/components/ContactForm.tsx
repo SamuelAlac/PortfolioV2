@@ -1,12 +1,14 @@
 import React, { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser';
 import { toast } from 'react-toastify';
+import { useMobile } from '@/hooks/useMobile';
 
 const ContactForm = () => {
   const SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
   const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
   const PUBLIC_KEY = import.meta.env.VITE_PUBLIC_KEY;
 
+  const isMobile = useMobile();
   const [loading, setLoading] = useState(false);
 
   const form = useRef<HTMLFormElement | null>(null);
@@ -47,7 +49,8 @@ const ContactForm = () => {
 
   return (
     <form ref={form} onSubmit={sendEmail} className='bg-white/5 rounded-sm w-full lg:h-130 md:w-100 lg:w-150 
-      flex flex-col p-3 lg:px-3 space-y-4 justify-center lg:justify-start' data-aos='fade-left' aria-label='Contact form'>
+      flex flex-col p-3 lg:px-3 space-y-4 justify-center lg:justify-start' aria-label='Contact form'
+      data-aos={isMobile ? 'fade-up' : 'fade-right'}>
       <div className='flex flex-col gap-y-1'>
         <label htmlFor="user_name" className='text-sm lg:text-xl'>Name</label>
         <input type="text" name='user_name' 
