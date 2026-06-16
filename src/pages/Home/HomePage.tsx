@@ -12,7 +12,7 @@ const HomePage = () => {
     <>
       <SEO
        title='Samuel Vincent Alac | Portfolio'
-       description='Full-stack software developer specializing TypeScript, React and Next.js. Building modern web applications.'
+       description='Full-stack software developer specializing TypeScript, React, Next.js and Node.js. Building modern web applications.'
        image='https://samuel-vincent-alac.vercel.app/thumbnail.png'
       />
 
