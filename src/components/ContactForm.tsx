@@ -50,7 +50,7 @@ const ContactForm = () => {
   return (
     <form ref={form} onSubmit={sendEmail} className='bg-white/5 rounded-sm w-full lg:h-130 md:w-100 lg:w-150 
       flex flex-col p-3 lg:px-3 space-y-4 justify-center lg:justify-start' aria-label='Contact form'
-      data-aos={isMobile ? 'fade-up' : 'fade-right'}>
+      data-aos={isMobile ? 'fade-up' : 'fade-left'}>
       <div className='flex flex-col gap-y-1'>
         <label htmlFor="user_name" className='text-sm lg:text-xl'>Name</label>
         <input type="text" name='user_name' 
@@ -82,7 +82,7 @@ const ContactForm = () => {
           placeholder='Tell me about your projects or ideas'
         />
       </div>
-      <button type="submit" disabled={loading} className="bg-[#CBACF9]/80 h-10 rounded-md disabled:opacity-50">
+      <button type="submit" disabled={loading} className="bg-[#CBACF9]/90 h-10 rounded-md disabled:opacity-50">
         {loading ? 'Sending...' : 'Send Message'}
       </button>
     </form>

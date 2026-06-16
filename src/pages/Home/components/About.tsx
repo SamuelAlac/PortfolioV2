@@ -3,7 +3,7 @@ import Services from "./Services"
 const About = () => {
 
   return (
-    <section id='about' className='min-h-screen flex flex-col lg:flex-row justify-around items-center text-white pt-15 overflow-x-hidden'>
+    <section id='about' className='min-h-screen flex flex-col lg:flex-row justify-around items-center text-white pt-15 overflow-x-hidden lg:mx-5'>
       <div className="md:w-150 md:h-120 space-y-2.5 md:space-y-5 px-5 md:px-0" data-aos='fade-right'>
         <div>
           <h2 className='md:text-5xl font-bold text-[#CBACF9]'>Building the future,</h2>
