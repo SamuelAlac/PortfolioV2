@@ -5,8 +5,6 @@ import { useMobile } from "@/hooks/useMobile";
 import { proofs } from "@/constants/proofs";
 import ProofsCard from "@/components/ProofsCard";
 import { useState } from "react";
-import { contacts } from "@/constants/contacts";
-import ContactCard from "@/components/ContactCard";
 const PROFILE_PIC = '/SAMUEL_ALAC.png'
 
 const Hero = () => {
