@@ -5,6 +5,8 @@ import { useMobile } from "@/hooks/useMobile";
 import { proofs } from "@/constants/proofs";
 import ProofsCard from "@/components/ProofsCard";
 import { useState } from "react";
+import { contacts } from "@/constants/contacts";
+import ContactCard from "@/components/ContactCard";
 const PROFILE_PIC = '/SAMUEL_ALAC.png'
 
 const Hero = () => {
@@ -20,7 +22,6 @@ const Hero = () => {
           <p className="text-xl md:text-3xl lg:text-4xl font-normal">Hello World, I'm</p>
           <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-[#CBACF9]">Samuel Vincent Alac</h1>
           <h2 className="text-xl md:text-3xl lg:text-4xl font-semibold">Software Developer</h2>
-
           <ul className='lg:h-20 flex items-center gap-3 md:gap-5'>
             {proofs.map((proof, index) => (
               <li key={index}>
